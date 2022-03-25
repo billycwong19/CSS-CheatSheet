@@ -1,0 +1,101 @@
+:root {
+    --pionk: rgb(208, 195, 101);
+    --gray: #343a40;
+}
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--pionk)
+}
+main {
+    /* border: solid black 2px; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+body {
+    background-color: var(--gray);
+}
+header { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 100px;
+}
+header h1 {
+    text-align: center;
+    font-size: 30px;
+    margin-top: 20px;
+}
+header p {
+    color:white;
+    margin-top: 20px;
+    text-align:center;
+}
+.card {
+    border: dotted 2px white;
+    border-radius: 1px;
+    margin: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 400px;
+}
+.card h1 {
+    border: solid white 1px;
+    border-radius: 8px;
+    position: relative;
+    top: -20px;
+    background-color: var(--gray);
+    padding: 4px;
+    margin: 0 10px;
+    font-size: 25px;
+}
+.card p {
+    text-align: left;
+    padding-left: 12px;
+    width: 90%
+}
+.cardCode {
+    /* border: solid white 1px; */
+    border-radius: 8px;
+    background-image: linear-gradient(var(--gray), var(--pionk));
+    margin: 10px;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.card pre {
+    padding-left: 5px;
+    display: flex;
+    flex-flow: column wrap;
+    align-content: baseline;
+}
+
+.card code {
+    color: white;
+    font-family: monospace;
+    -moz-user-select: all;
+    -webkit-user-select: all;
+    -ms-user-select: all;
+    user-select: all;
+}
+code:active {
+    color:rgb(153, 255, 0)
+}
+
+.cardCode, .card h1 {
+    transition: all 0.5s ease-in-
+out;
+}
+.cardCode:hover {
+    box-shadow: inset 0px 0px 8px
+rgba(232, 102, 236, 1), 0 0 15px
+rgba(232, 102, 236, 1);
+}
+
+.card:hover h1 {
+    box-shadow: inset 0px 0px 8px
+rgba(232, 102, 236, 1), 0 0 15px
+rgba(232, 102, 236, 1);
+}
