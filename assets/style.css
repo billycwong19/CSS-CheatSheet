@@ -39,7 +39,7 @@ header p {
     margin: 20px 10px;
     display: flex;
     flex-direction: column;
-    flex: 0 0 400px;
+    flex: 1 0 400px;
 }
 .card h1 {
     border: solid white 1px;
