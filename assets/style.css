@@ -39,7 +39,7 @@ header p {
     margin: 20px 10px;
     display: flex;
     flex-direction: column;
-    flex: 1 1 400px;
+    flex: 0 0 400px;
 }
 .card h1 {
     border: solid white 1px;
@@ -80,8 +80,11 @@ header p {
     -ms-user-select: all;
     user-select: all;
 }
-code:active {
-    color:rgb(153, 255, 0)
+code::selection {
+    background-color: rgba(0, 0, 0, 0.509);
+}
+code:hover {
+    color:rgb(132, 220, 0)
 }
 
 .cardCode, .card h1 {
@@ -99,3 +102,28 @@ rgba(232, 102, 236, 1);
 rgba(232, 102, 236, 1), 0 0 15px
 rgba(232, 102, 236, 1);
 }
+
+footer {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+footer h1 {
+    font-size: 25px;
+}
+footer a {
+    margin: 20px 0px;
+    text-decoration: none;
+    color: var(--pionk);
+}
+
+/* @media screen and (max-width: 992px) {
+    .card {
+        
+}
+
+@media screen and (max-width: 768px) {
+    .card {
+        
+    }
+} */
