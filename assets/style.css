@@ -47,7 +47,7 @@ header p {
     display: flex;
     flex-direction: column;
     width: 33%;
-    flex: 1 1 auto;
+    flex: 1 1 379px;
 }
 /* header for the cards and displacing them. */
 .card h1 {
@@ -72,7 +72,6 @@ header p {
     background-image: linear-gradient(var(--gray), var(--pionk));
     margin: 10px;
     flex-grow: 1;
-
 }
 
 .card pre {
@@ -127,26 +126,27 @@ footer a {
     text-decoration: none;
     color: var(--pionk);
 }
-
-@media screen and (min-width: 768px) {
-    .card {
-      width: 50%;
-    }
-    
-    header {
-      background: #8ac4ff;
-    }
-  }
-
-@media screen and (min-width: 992px) {
+@media screen and (max-width: 992px) {
     .card {
       width: 33%;
     }
     
-    header {
+    /* header {
       background: #772014;
-    }
+    } */
   }
+
+@media screen and (max-width: 768px) {
+    .card {
+      width: 50%;
+    }
+    
+    /* header {
+      background: #8ac4ff;
+    } */
+  }
+
+
   
   
 
