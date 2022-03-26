@@ -1,46 +1,55 @@
+/* variable colors */
 :root {
     --pionk: rgb(208, 195, 101);
     --gray: #343a40;
 }
+/* font and color for whole page unless changed in properties */
 * {
     font-family: Arial, Helvetica, sans-serif;
     color: var(--pionk)
 }
+/* set up main element as a flexbox container. there is also a commented out
+border for learning purposes. if you take it out of comments you can see which 
+items belong within this container. */
 main {
     /* border: solid black 2px; */
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
 }
+
 body {
     background-color: var(--gray);
 }
+/* is there an easier way to center this stuff or am i just crazy? */
 header { 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 20px 100px;
+    margin: 20px 0;
 }
 header h1 {
-    text-align: center;
     font-size: 30px;
     margin-top: 20px;
 }
 header p {
     color:white;
     margin-top: 20px;
-    text-align:center;
+    text-align: center;
+    padding: 0 5%;
 }
+/* this is the class for all the flex box containers within the main flexbox container.*/
 .card {
     border: dotted 2px white;
     border-radius: 1px;
     margin: 20px 10px;
     display: flex;
     flex-direction: column;
-    flex: 1 1 400px;
+    width: 33%;
+    flex: 1 1 auto;
 }
+/* header for the cards and displacing them. */
 .card h1 {
     border: solid white 1px;
     border-radius: 8px;
@@ -56,22 +65,21 @@ header p {
     padding-left: 12px;
     width: 90%
 }
+/* this is for the code section including its gradient background */
 .cardCode {
     /* border: solid white 1px; */
     border-radius: 8px;
     background-image: linear-gradient(var(--gray), var(--pionk));
     margin: 10px;
     flex-grow: 1;
-    justify-content: center;
+
 }
 
 .card pre {
-    padding-left: 5px;
-    display: flex;
-    flex-flow: column wrap;
-    align-content: baseline;
+    padding: 5px 0 5px 10px;
 }
-
+/* this is for inside the code box. it highlights the coding passage
+as the user clicks on any part of the code. */
 .card code {
     color: white;
     font-family: monospace;
@@ -80,9 +88,11 @@ header p {
     -ms-user-select: all;
     user-select: all;
 }
+/* interactive features start here with this opaque black highlight on the code */
 code::selection {
     background-color: rgba(0, 0, 0, 0.509);
 }
+/* this makes the code neon green on hover */
 code:hover {
     color:rgb(132, 220, 0)
 }
@@ -102,6 +112,7 @@ rgba(232, 102, 236, 1);
 rgba(232, 102, 236, 1), 0 0 15px
 rgba(232, 102, 236, 1);
 }
+/* interactive fun stuff ends here :( */
 
 footer {
     display: flex;
@@ -117,13 +128,26 @@ footer a {
     color: var(--pionk);
 }
 
-/* @media screen and (max-width: 992px) {
+@media screen and (min-width: 768px) {
     .card {
-        
-}
-
-@media screen and (max-width: 768px) {
-    .card {
-        
+      width: 50%;
     }
-} */
+    
+    header {
+      background: #8ac4ff;
+    }
+  }
+
+@media screen and (min-width: 992px) {
+    .card {
+      width: 33%;
+    }
+    
+    header {
+      background: #772014;
+    }
+  }
+  
+  
+
+  
