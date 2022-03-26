@@ -46,8 +46,7 @@ header p {
     margin: 20px 10px;
     display: flex;
     flex-direction: column;
-    width: 33%;
-    flex: 1 1 379px;
+    flex: 1 2 400px;
 }
 /* header for the cards and displacing them. */
 .card h1 {
@@ -126,28 +125,24 @@ footer a {
     text-decoration: none;
     color: var(--pionk);
 }
+
 @media screen and (max-width: 992px) {
     .card {
-      width: 33%;
+      flex: 1 1 50vh;
+      
     }
     
-    /* header {
+    header {
       background: #772014;
-    } */
+    }
   }
 
 @media screen and (max-width: 768px) {
     .card {
-      width: 50%;
+      flex: 1 1 100vh;
     }
     
-    /* header {
+    header {
       background: #8ac4ff;
-    } */
-  }
-
-
-  
-  
-
-  
+    }
+  } 
